@@ -21,3 +21,7 @@ begin
 end;
 ```
 
+***
+It looks like this on my machine:
+
+![Image](https://github.com/murrto/bsBalloonHint/blob/master/Annotation004538.jpg)
