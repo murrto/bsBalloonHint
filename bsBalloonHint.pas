@@ -1,9 +1,9 @@
 unit bsBalloonHint;
-
-        //===================================================================================================//
+         //===================================================================================================//
+        // В© https://github.com/murrto/bsBalloonHint/ with вќ¤ by murr                                         //
        // Nice little Ballon Hint component with a close button and user defined position and display time: //
       //===================================================================================================//
-     //  ¬   ¬                         ¬           ¬ ¬                   ¬    _        ¬  _               //
+     //  В¬   В¬                         В¬           В¬ В¬                   В¬    _        В¬  _               //
     // / / / /___ _____  ____   _   _/ /_   ___ _/ / /___   ___  ____  / /_  (_)___  / /_(_)___   ___ _  //
    // / /_/ /  _ `/ _  \/ _  \/ / / / _  \/  _ `/ / / __ \/ __ \/ _  \/ _  \/ / _  \/ __/ / _  \/  _ `/ //
   // / __  / (_/ / /_) / /_) / (_/ / /_) / (_/ / / / (_) / (_) / / ) / / ) / / / ) / (_/ / / ) / (_/ / //
@@ -21,7 +21,7 @@ var lToolTipPoint: TPoint;
 begin
   Button1.bsBalloonTip(TIconKind.Eror_Large,'Balloon Title','Balloon text', Button1.ClientToScreen(Point(0,0))); //appears from top left corner of the Button1
   lToolTipPoint := Form1.DBGrid.ClientToScreen(Point(Round(Form1.DBGrid.Width/2),Round(Form1.DBGrid.Height/2))); //getting DBGrid center to show a tip there
-  bsBalloonTip(TIconKind.Info, 'Увага!', 'Документ щойно оновлено новим значенням!', lToolTipPoint, 2222); //showing tip for about 2 sec
+  bsBalloonTip(TIconKind.Info, 'Attention!', 'The values were updated!', lToolTipPoint, 2222); //showing tip for about 2 sec
 end;}
 
 
@@ -58,12 +58,11 @@ procedure TComponentBalloonHint.bsBalloonTip(      Icon           : TIconKind;
                                              const Title          : string;
                                              const Text           : string;
                                                    DesiredPosition: TPoint;
-                                                   ShowingTime    : System.Cardinal = 0); // 0 - Showing until user closes
+                                                   ShowingTime    : System.Cardinal = 88888888); //leave blank to show until user closes it
 var
   ToolInfo: TToolInfo;
   BodyText: pWideChar;
   ltimer: TTimer;
-  lRect: TRect;
 begin
   hWndToolTip :=  CreateWindow(TOOLTIPS_CLASS,
                           nil,
